@@ -7,7 +7,7 @@ const post = {
   title: "Dinos are cool", 
   author: "Randy Rex", 
   body: "I like turtles", 
-  comments: "lame"
+  comments: ["lame", "first", "same"]
 };
 
 ReactDOM.render(
