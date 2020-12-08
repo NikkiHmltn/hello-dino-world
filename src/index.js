@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+const post = {
+  title: "Dinos are cool", 
+  author: "Randy Rex", 
+  body: "I like turtles", 
+  comments: "lame"
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App 
+    post={post}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

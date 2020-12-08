@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './HelloWorld';
+import HelloNikki from './HelloNikki';
+import QuestionOne from './QuestionOne';
+import Waffles from './Waffles';
+import QuestionTwo from './QuestionTwo'
+import Pancakes from './Pancakes'
+import Classmate from './Classmate'
 
-function App() {
+const otherClassMates = ['Rome', 'Mike'];
+const displayOtherClassMates = otherClassMates.map((eachClassMate, idx) => {
+  return <Classmate location="Atlanta" name={eachClassMate} key={idx}/>
+  });
+
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HelloWorld />
+      <HelloNikki />
+      <QuestionOne />
+      <Waffles />
+      <QuestionTwo />
+      <Pancakes />
+      <Classmate name="Carolina" location="Columbia"/>
+      <Classmate name="Ruben" location= "New York"/>
+      <Classmate name="Ashton" location="sorry I forgot was it Michigan"/>
+      {displayOtherClassMates}
+    <h1>{props.post.title}</h1>
+    <p>by {props.post.author}</p>
+    <p>{props.post.body}</p>
+    <h2>Comments</h2>
+    <p>{props.post.comments}</p>
     </div>
   );
 }
